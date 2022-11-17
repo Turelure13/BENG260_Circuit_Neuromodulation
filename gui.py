@@ -8,6 +8,10 @@ slow -ve, and ultra-slow +ve conductance.
 from gui_utilities import GUI
 from neuron_model import Neuron
 
+# import matplotlib
+# matplotlib.use('TkAgg')
+
+
 # Initial gain and offset parameters
 a_f = -2
 voff_f = 0

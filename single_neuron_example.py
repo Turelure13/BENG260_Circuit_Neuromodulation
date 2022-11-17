@@ -6,7 +6,7 @@ An example of a single-neuron simulation
 
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.use('TkAgg')
+
 
 from neuron_model import Neuron
 
@@ -33,5 +33,14 @@ sol = neuron.simulate(trange, i_app)
 # y[0] - membrane voltage, y[1] - slow voltage, y[2] - ultra-slow voltage
 plt.figure()
 plt.plot(sol.t, sol.y[0],sol.t, sol.y[1],sol.t, sol.y[2])
+plt.show()
+plt.figure()
+plt.plot(sol.t, sol.y[0])
+plt.show()
+plt.figure()
+plt.plot(sol.t, sol.y[1])
+plt.show()
+plt.figure()
+plt.plot(sol.t, sol.y[2])
 plt.show()
 print('')
