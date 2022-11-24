@@ -15,7 +15,7 @@ ts = 50
 tus = 50 * 50
 
 # Define circuit elements
-n = 3  # number of neurons
+n = 2  # number of neurons
 neurons = []  # list of all neurons in the network
 
 for j in range(2):
@@ -47,6 +47,7 @@ network = Network(neurons, (inh_synapse, g_inh), (exc_synapse, g_exc),
 trange = (0, 20000)
 
 # Define i_app as a function of t: returns an i_app for each neuron
+# I_{synapse}(t) = g(t) S(V_{pre(t))[E_{excitatory} - V_{post}(t)]
 i_app = lambda t: [-2.1, -2]
 
 sol = network.simulate(trange, i_app)
