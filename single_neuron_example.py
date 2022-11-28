@@ -24,7 +24,7 @@ i3 = neuron.add_current(-1.5, -1.5, ts) # slow negative conductance
 i4 = neuron.add_current(1.5, -1.5, tus) # ultraslow positive conductance
 
 # Simulate the circuit
-trange = (0, 10000)
+trange = (0, 5000)
 i_app = lambda t: -2 # define i_app as function of t
 
 sol = neuron.simulate(trange, i_app)
